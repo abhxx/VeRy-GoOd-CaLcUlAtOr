@@ -1,0 +1,78 @@
+﻿<Window x:Class="WpfApp_testing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_testing"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="400"
+        Width="500"
+        Background="DarkTurquoise">
+
+    <StackPanel>
+        <Label FontSize="25" FontWeight="ExtraBold">very Good CalCUlAtor
+        </Label>
+
+        <TextBox x:Name="result"
+            Margin="0,20,0,0"
+                 FontWeight="Bold"
+                 FontSize="20"
+                 IsReadOnly="True">
+
+            0
+        </TextBox>
+        <StackPanel Margin="50"
+                    Orientation="Horizontal">
+            <RadioButton x:Name="multiply"
+                         Content="*"
+                         GroupName="op" Checked="multiply_Checked"/>
+            <RadioButton Content="/"
+                         Name="divide"
+                         GroupName="op" Checked="divide_Checked"/>
+            <RadioButton Content="-"
+                         Name="substract"
+                         GroupName="op" Checked="substract_Checked"/>
+            <RadioButton Content="+"
+                         Name="plus"
+                         GroupName="op"
+                         Checked="plus_Checked"
+                         IsChecked="True" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,100,0,0">
+
+            <Slider x:Name="num1Slider"
+                    Width="230"
+                    Maximum="10000"
+                    Minimum="0"
+                    
+                    ValueChanged="Slider_ValueChanged">
+
+            </Slider>
+
+            <Label Name="op"
+                  Width="20"
+                   Content="+"
+                   FontWeight="Bold"
+                   FontSize="16" />
+
+            <Slider Width="230"
+                    Name="num2Slider"
+                    Maximum="100000"
+                    Minimum="0"
+                    ValueChanged="Slider_ValueChanged_1">
+
+            </Slider>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="0"
+                   Name="num1label"
+                   Width="250" />
+            <Label Content="0"
+                   Name="num2label"
+                   Width="250" />
+        </StackPanel>
+    </StackPanel>
+</Window>
